@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>全屏切换</title>
+	<!-- build:css css/combined.css -->
+	<link rel="stylesheet" href="css/main.css">
+	<!-- endbuild -->
+</head>
+<body>
+	<div id="container">
+		<div class="sections">
+			<div class="section active" id="section0">
+				<div class="intro">
+					<h1 class="title">个人简历</h1>
+					<p>达则兼济天下，穷则独善其身</p>
+				</div>
+			</div>
+			<div class="section" id="section1">
+				<div class="intro">
+					<h1 class="title">教育经历</h1>
+					<p>中山大学 2010.09-2014.07</p>
+				</div>
+			</div>
+			<div class="section" id="section2">
+				<div class="intro">
+					<h1 class="title">工作经历</h1>
+					<p>xx科技有限公司 2014.06至今</p>
+				</div>
+			</div>
+			<div class="section" id="section3">
+				<div class="intro">
+					<h1 class="title">THE END</h1>
+					<p>Thakns</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- build:js scripts/combined.js -->
+	<script type="text/javascript" src="js/vendor/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="js/pageswitch.js"></script>
+	<!-- endbuild -->
+	<<script>
+		$('#container').PageSwitch({
+			// direction:'horizontal',
+			easing: 'ease-in',
+			callback: function(){
+				$('h1').addClass('slide');
+			}
+		});
+	</script>
+
+</body>
+</html>
